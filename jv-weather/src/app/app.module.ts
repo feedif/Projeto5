@@ -22,7 +22,6 @@ import { CustomRouterSerializer } from './shared/state/router/router.reducer';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     HomeModule,
@@ -31,6 +30,7 @@ import { CustomRouterSerializer } from './shared/state/router/router.reducer';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot({ serializer: CustomRouterSerializer }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
